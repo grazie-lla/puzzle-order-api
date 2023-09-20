@@ -1,0 +1,12 @@
+version: '3.6'
+services:
+  mongodb:
+    container_name: puzzle-mongo
+    image: mongo
+    restart: always
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=admin
+      - MONGO_INITDB_DATABASE=puzzledb
+    ports:
+      - 27017:27017
